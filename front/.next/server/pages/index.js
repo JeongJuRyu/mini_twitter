@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
 
-var _jsxFileName = "C:\\Users\\user\\Desktop\\mini-twitter\\pages\\index.js";
+var _jsxFileName = "C:\\Users\\user\\Desktop\\mini-twitter\\front\\pages\\index.js";
 
 
 
