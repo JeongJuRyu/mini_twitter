@@ -25,7 +25,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_configureStore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../store/configureStore */ "./store/configureStore.js");
 
 
-var _jsxFileName = "C:\\Users\\user\\Desktop\\mini-twitter\\front\\pages\\_app.js";
+var _jsxFileName = "C:\\Users\\Ryu\\Desktop\\mini-twitter\\front\\pages\\_app.js";
 
 
 
