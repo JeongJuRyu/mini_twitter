@@ -5,12 +5,12 @@ import Layout from "../components/Layout";
 
 const Home = () => {
   const { logIn } = useSelector((state) => state.user);
-  useEffect(() => {
+  /*useEffect(() => {
     if (!logIn) Router.push("/logIn");
-  });
+  });*/
   return (
     <>
-      <Layout></Layout>
+      <Layout>post</Layout>
     </>
   );
 };
