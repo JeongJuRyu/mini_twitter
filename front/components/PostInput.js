@@ -1,7 +1,7 @@
 import { Form, Input } from "antd";
 import { useCallback, useState } from "react";
 
-const FormPost = () => {
+const PostInput = () => {
   const [text, setText] = useState("");
   const onChangeText = useCallback((e) => {
     setText(e.target.value);
@@ -27,4 +27,4 @@ const FormPost = () => {
   );
 };
 
-export default FormPost;
+export default PostInput;

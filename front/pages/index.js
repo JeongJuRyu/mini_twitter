@@ -2,7 +2,8 @@ import Router from "next/router";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Layout from "../components/Layout";
-import FormPost from "../components/FormPost";
+import PostInput from "../components/PostInput";
+import PostSquare from "../components/PostSquare";
 const Home = () => {
   const { logIn } = useSelector((state) => state.user);
   /*useEffect(() => {
@@ -11,7 +12,8 @@ const Home = () => {
   return (
     <>
       <Layout>
-        <FormPost></FormPost>
+        <PostInput></PostInput>
+        <PostSquare></PostSquare>
       </Layout>
     </>
   );
