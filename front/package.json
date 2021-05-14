@@ -9,7 +9,9 @@
   "author": "JeongJuRyu",
   "license": "ISC",
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "antd": "^4.15.4",
+    "axios": "^0.21.1",
     "immer": "^9.0.2",
     "next": "^10.2.0",
     "next-redux-saga": "^4.1.2",
