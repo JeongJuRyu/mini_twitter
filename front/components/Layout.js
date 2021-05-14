@@ -1,15 +1,11 @@
 import Link from "next/link";
-import styled from "styled-components";
 import { Menu, Input, Row, Col } from "antd";
 import { TwitterCircleFilled } from "@ant-design/icons";
 import PropTypes from "prop-types";
 import Weather from "./weather";
+import { HomeWrapper } from "../util/style";
 
-const Image = styled.image`
-  width: 20px;
-  height: 20px;
-`;
-const Layout = ({ child }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <Row justify="center" gutter={8}>
@@ -36,7 +32,19 @@ const Layout = ({ child }) => {
           </Menu>
         </Col>
         <Col xs={24} md={8}>
-          {child}
+          <div
+            style={{
+              width: "32vw",
+              position: "fixed",
+              zIndex: 1,
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>홈</div>
+            <div style={{}}>너</div>
+          </div>
+          {children}
         </Col>
         <Col xs={24} md={4}>
           <Weather />
@@ -49,4 +57,5 @@ const Layout = ({ child }) => {
 Layout.propTypes = {
   child: PropTypes.node.isRequired,
 };
+
 export default Layout;
