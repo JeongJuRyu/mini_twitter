@@ -13,10 +13,10 @@ import { useCallback, useState } from "react";
 const { Meta } = Card;
 
 const PostSquare = () => {
-  const [liked, setLiked] = useState(false);
+  const [like, setLike] = useState(false);
   const [commentVisible, setCommentVisible] = useState(false);
   const onToggleLike = useCallback(() => {
-    setLiked((state) => !state);
+    setLike((state) => !state);
   }, []);
   const onToggleComment = useCallback(() => {
     setCommentVisible((state) => !state);
@@ -24,6 +24,7 @@ const PostSquare = () => {
   return (
     <>
       <Card
+        style={{ marginTop: "30px" }}
         cover={
           <img
             alt="example"
@@ -32,7 +33,7 @@ const PostSquare = () => {
         }
         actions={[
           <RetweetOutlined key="retweet" />,
-          liked ? (
+          like ? (
             <HeartTwoTone
               twoToneColor="#eb2f96"
               key="heart"
