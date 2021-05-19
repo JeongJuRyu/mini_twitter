@@ -1,8 +1,8 @@
 import produce from "../util/produce";
 
-export const UPLOAD_POST_REQUEST = "UPLOAD_POST_REQUEST";
-export const UPLOAD_POST_SUCCESS = "UPLOAD_POST_SUCCESS";
-export const UPLOAD_POST_FAILURE = "UPLOAD_POST_FAILURE";
+export const SUBMIT_POST_REQUEST = "SUBMIT_POST_REQUEST";
+export const SUBMIT_POST_SUCCESS = "SUBMIT_POST_SUCCESS";
+export const SUBMIT_POST_FAILURE = "SUBMIT_POST_FAILURE";
 
 export const LOAD_POST_REQUEST = "LOAD_POST_REQUEST";
 export const LOAD_POST_SUCCESS = "LOAD_POST_SUCCESS";
@@ -49,6 +49,12 @@ const reducer = (state = initialState, action) =>
         break;
       case LOAD_POST_FAILURE:
         draft.loadPostLoading = false;
+        draft.loadPostComplete = false;
+        draft.loadPostError = null;
+        break;
+      case SUBMIT_POST_REQUEST:
+        draft.Posts.unshift(action.data);
+        draft.loadPostLoading = true;
         draft.loadPostComplete = false;
         draft.loadPostError = null;
         break;

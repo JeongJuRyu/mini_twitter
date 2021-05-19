@@ -1,5 +1,6 @@
 import { Form, Input } from "antd";
 import { useCallback, useState } from "react";
+import { SUBMIT_POST_REQUEST } from "../reducers/post";
 
 const PostInput = () => {
   const [text, setText] = useState("");
