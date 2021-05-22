@@ -26,7 +26,20 @@ module.exports = (sequelize, DataTypes) => {
   User.associate = (db) => {
     db.User.hasMany(db.Post); // 작성자
     db.User.hasMany(db.Comment);
-    db.User.belongsToMany(db.Post, { through: "Like" }); // 좋아요 관계
+    //내가 좋아요를 누른 게시글들
+    db.User.belongsToMany(db.Post, { through: "Like", as: "Liked" }); // 좋아요 관계
+    //새로운 중간 테이블을 생성할 때, 양 쪽 모두 UserId를 가지므로 foreignKey로 userId 부분을 바꿔서 구분 해 준다.
+    //through는 table의 이름을 바꿔주는 것
+    db.User.belongsToMany(db.User, {
+      through: "Follow",
+      as: "Followers",
+      foreignKey: "FollowingId",
+    });
+    db.User.belongsToMany(db.User, {
+      through: "Follow",
+      as: "Followings",
+      foreignKey: "FollwerId",
+    });
   };
   return User;
 };

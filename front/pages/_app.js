@@ -5,14 +5,14 @@ import "antd/dist/antd.css";
 
 import wrapper from "../store/configureStore";
 
-const NodeBird = ({ Component }) => (
+const MiniTwitter = ({ Component }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
-      <title>NodeBird</title>
+      <title>MiniTwitter</title>
     </Head>
     <Component />
   </>
 );
 
-export default wrapper.withRedux(NodeBird);
+export default wrapper.withRedux(MiniTwitter);
